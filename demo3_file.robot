@@ -10,4 +10,3 @@ TC1
     Log To Console    ${TEMPDIR}
     Log To Console    ${TEST_NAME}
     Log To Console    ${SUITE_NAME}
-    
