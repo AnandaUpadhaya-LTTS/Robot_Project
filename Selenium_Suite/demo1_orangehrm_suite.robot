@@ -28,9 +28,10 @@ TC2
     Click Button    id=btnLogin
     Click Element    link=My Info
     Click Element    Link=Emergency Contacts
-    Click Element    class id=btnAddContact
-    Input Text      xpath=//*[@id="emgcontacts_name"]    sat
+    Click Element    xpath=//*[@id="btnAddContact"]
+    Input Text      xpath=//*[@id="emgcontacts_name"]    Ananda
     Input Text    id=emgcontacts_relationship    Brother
     Input Text    id=emgcontacts_homePhone    78988
     Click Button    id=btnSaveEContact
+    Table Should Contain    id=emgcontact_list    Ananda
     Close All Browsers
