@@ -19,4 +19,18 @@ TC1
     Close All Browsers
 
 TC2
-    Log To Console    Checking
+    Append To Environment Variable    Path      ${EXECDIR}${/}Driver${/}
+    Open Browser        url=https://opensource-demo.orangehrmlive.com/      browser=chrome
+    Set Selenium Implicit Wait    20s
+    Maximize Browser Window
+    Input Text    id=txtUsername    Admin
+    Input Password    id=txtPassword    admin123
+    Click Button    id=btnLogin
+    Click Element    link=My Info
+    Click Element    Link=Emergency Contacts
+    Click Element    class id=btnAddContact
+    Input Text      xpath=//*[@id="emgcontacts_name"]    sat
+    Input Text    id=emgcontacts_relationship    Brother
+    Input Text    id=emgcontacts_homePhone    78988
+    Click Button    id=btnSaveEContact
+    Close All Browsers
