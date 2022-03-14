@@ -19,3 +19,4 @@ TC2
     Sleep    3s
     Remove File    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder${/}test.txt
     Remove Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
+    #Remove Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
