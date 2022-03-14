@@ -15,3 +15,6 @@ TC1
 TC2
     Create Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
     Create File    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder${/}test.txt    Ananda Upadhaya
+    Copy File    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder${/}test.txt    D:${/}Robot_Framework${/}Robot_Programs${/}test.txt
+    Remove File    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder${/}test.txt
+    Remove Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
