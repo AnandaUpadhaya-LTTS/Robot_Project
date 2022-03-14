@@ -27,4 +27,5 @@ TC5
     ${radius}   Set Variable    10
     ${area}     Evaluate    3.14 * ${radius} ** 2
     Log To Console    ${area}
+    #Log To Console    ${area}
 

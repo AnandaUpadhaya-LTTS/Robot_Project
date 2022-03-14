@@ -20,3 +20,4 @@ TC2
     Remove File    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder${/}test.txt
     Remove Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
     #Remove Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
+    #Remove Directory    D:${/}Robot_Framework${/}Robot_Programs${/}New_folder
