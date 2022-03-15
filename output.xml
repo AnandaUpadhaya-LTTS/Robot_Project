@@ -1,96 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220314 15:36:56.527" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo1 Orangehrm Suite" source="D:\Robot_Framework\Robot_Programs\Selenium_Suite\demo1_orangehrm_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 15:56:13.487" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo6 Frame Suite" source="D:\Robot_Framework\Robot_Programs\Selenium_Suite\demo6_frame_suite.robot">
 <test id="s1-t1" name="TC1">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>Path</arg>
-<arg>${EXECDIR}${/}Driver${/}</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220314 15:36:57.073" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Python310\python.exe;C:\Users\Ananda_Upadhaya\AppData\Local\Microsoft\WindowsApps;;D:\Robot_Framework\Robot_Programs\Driver\'.</msg>
-<status status="PASS" starttime="20220314 15:36:57.072" endtime="20220314 15:36:57.073"/>
-</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
 <arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220314 15:36:57.074" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220314 15:36:57.074" endtime="20220314 15:37:04.326"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220314 15:37:09.342" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220314 15:37:04.327" endtime="20220314 15:37:09.342"/>
+<msg timestamp="20220315 15:56:13.887" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220315 15:56:13.886" endtime="20220315 15:56:15.942"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220314 15:37:09.342" endtime="20220314 15:37:09.468"/>
+<status status="PASS" starttime="20220315 15:56:15.945" endtime="20220315 15:56:16.083"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220315 15:56:16.084" endtime="20220315 15:56:16.086"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.redbus.in/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220315 15:56:16.087" level="INFO">Opening url 'https://www.redbus.in/'</msg>
+<status status="PASS" starttime="20220315 15:56:16.087" endtime="20220315 15:56:29.118"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=sign-in-icon-down</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220315 15:56:29.119" level="INFO">Clicking element 'id=sign-in-icon-down'.</msg>
+<status status="PASS" starttime="20220315 15:56:29.118" endtime="20220315 15:56:29.196"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=signInLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220315 15:56:29.198" level="INFO">Clicking element 'id=signInLink'.</msg>
+<status status="PASS" starttime="20220315 15:56:29.198" endtime="20220315 15:56:29.330"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>class=modalIframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220315 15:56:29.332" level="INFO">Selecting frame 'class=modalIframe'.</msg>
+<status status="PASS" starttime="20220315 15:56:29.331" endtime="20220315 15:56:30.878"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=txtUsername</arg>
-<arg>Admin</arg>
+<arg>id=mobileNoInp</arg>
+<arg>2567895422</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220314 15:37:09.469" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220314 15:37:09.469" endtime="20220314 15:37:09.588"/>
+<msg timestamp="20220315 15:56:30.879" level="INFO">Typing text '2567895422' into text field 'id=mobileNoInp'.</msg>
+<status status="PASS" starttime="20220315 15:56:30.879" endtime="20220315 15:56:31.121"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=txtPassword</arg>
-<arg>admin123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220314 15:37:09.589" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
-<msg timestamp="20220314 15:37:09.641" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220314 15:37:09.701" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220314 15:37:09.588" endtime="20220314 15:37:09.702"/>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220315 15:56:31.121" endtime="20220315 15:56:31.125"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=btnLogin</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220314 15:37:09.703" level="INFO">Clicking button 'id=btnLogin'.</msg>
-<status status="PASS" starttime="20220314 15:37:09.702" endtime="20220314 15:37:15.252"/>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220315 15:56:31.125" endtime="20220315 15:56:33.402"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>My Info</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220314 15:37:15.282" level="INFO">Current page contains text 'My Info'.</msg>
-<status status="PASS" starttime="20220314 15:37:15.253" endtime="20220314 15:37:15.282"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220314 15:37:20.287" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220314 15:37:15.283" endtime="20220314 15:37:20.287"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=welcome</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220314 15:37:20.291" level="INFO">Clicking element 'id=welcome'.</msg>
-<status status="PASS" starttime="20220314 15:37:20.290" endtime="20220314 15:37:20.385"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220314 15:37:25.388" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220314 15:37:20.386" endtime="20220314 15:37:25.389"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>Link=Logout</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220314 15:37:25.391" level="INFO">Clicking element 'Link=Logout'.</msg>
-<status status="PASS" starttime="20220314 15:37:25.390" endtime="20220314 15:37:26.654"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220314 15:37:31.668" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220314 15:37:26.655" endtime="20220314 15:37:31.669"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220314 15:37:31.671" endtime="20220314 15:37:34.007"/>
-</kw>
-<status status="PASS" starttime="20220314 15:36:57.071" endtime="20220314 15:37:34.008"/>
+<status status="PASS" starttime="20220315 15:56:13.885" endtime="20220315 15:56:33.403"/>
 </test>
-<status status="PASS" starttime="20220314 15:36:56.531" endtime="20220314 15:37:34.010"/>
+<status status="PASS" starttime="20220315 15:56:13.490" endtime="20220315 15:56:33.406"/>
 </suite>
 <statistics>
 <total>
@@ -99,7 +68,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo1 Orangehrm Suite">Demo1 Orangehrm Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo6 Frame Suite">Demo6 Frame Suite</stat>
 </suite>
 </statistics>
 <errors>
