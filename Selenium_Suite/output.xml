@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 10:36:38.866" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo2 Suite" source="D:\Robot_Framework\Robot_Programs\Selenium_Suite\demo2_suite.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}${/}Driver${/}</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220315 10:36:39.273" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Python310\python.exe;C:\Users\Ananda_Upadhaya\AppData\Local\Microsoft\WindowsApps;;D:\Robot_Framework\Robot_Programs\Selenium_Suite\Driver\'.</msg>
+<status status="PASS" starttime="20220315 10:36:39.273" endtime="20220315 10:36:39.274"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.goto.com/meeting/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220315 10:36:39.275" level="INFO">Opening browser 'chrome' to base url 'https://www.goto.com/meeting/'.</msg>
+<msg timestamp="20220315 10:36:39.293" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220315 10:36:39.298" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220315 10:36:39.274" endtime="20220315 10:36:39.298"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.299" endtime="20220315 10:36:39.299"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.299" endtime="20220315 10:36:39.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=truste-consent-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.300" endtime="20220315 10:36:39.300"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Get a Demo</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.300" endtime="20220315 10:36:39.300"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@data-sc-field-name='firstName']</arg>
+<arg>Ananda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.300" endtime="20220315 10:36:39.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@data-sc-field-name='lastName']</arg>
+<arg>Upadhaya</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.301" endtime="20220315 10:36:39.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@data-sc-field-name='email']</arg>
+<arg>ananda@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.302" endtime="20220315 10:36:39.302"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20220315 10:36:39.303" endtime="20220315 10:36:39.303"/>
+</kw>
+<status status="FAIL" starttime="20220315 10:36:39.273" endtime="20220315 10:36:39.303">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<status status="FAIL" starttime="20220315 10:36:38.868" endtime="20220315 10:36:39.305"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo2 Suite">Demo2 Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

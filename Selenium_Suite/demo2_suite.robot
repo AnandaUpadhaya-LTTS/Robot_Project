@@ -15,6 +15,7 @@ TC1
         Input Text    xpath=//input[@data-sc-field-name='firstName']    Ananda
         Input Text    xpath=//input[@data-sc-field-name='lastName']    Upadhaya
         Input Text    xpath=//input[@data-sc-field-name='email']    ananda@gmail.com
-        Select From List By Label    xpath=//select[@data-sc-field-name='employees']    10-99
+        Select From List By Label    xpath=//select[@data-sc-field-name='employees']    10 - 99
+        Sleep    20s
         Click Element    xpath=//input[@type='submit']
         [Teardown]      Close Browser
