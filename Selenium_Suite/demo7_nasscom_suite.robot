@@ -18,6 +18,7 @@ TC1
         Select From List By Label    id=edit-field-city-membership-und      Chennai
         Click Element    xpath=//label[@for='edit-field-mode-of-payment-und-1']
         Click Element    id=edit-field-code-of-conduct-und-0
+        Choose File    id=edit-field-memorandum-article-of-asso-und-0-upload    C:${/}Users${/}Ananda_Upadhaya${/}Desktop${/}test.pdf
         Click Element    id=edit-preview
 
         [Teardown]  Close Browser
