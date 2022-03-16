@@ -24,4 +24,6 @@ TC2
         Click Element    xpath=//a[@id='edit-submitted-contact-person-for-nasscom-email-id-cp']
         ${alert_text1}   Handle Alert    action=ACCEPT       timeout=30s
         Log To Console    ${alert_text1}
+        Should Be Equal    ${alert_text1}   Please enter amount in digit and greater than zero.
+
 
