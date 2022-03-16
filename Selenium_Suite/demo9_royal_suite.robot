@@ -8,6 +8,7 @@ Test Teardown   Close Browser
 TC1
 
         Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
+        Set Selenium Speed    1s
         Maximize Browser Window
         Set Selenium Implicit Wait    20s
         Go To    https://www.royalcaribbean.com/account/
@@ -22,9 +23,12 @@ TC1
         Click Element    xpath=//span[contains(text(),'January')]
 
         Click Element    xpath=//span[text()='Day']
-        Click Element    xpath=//span[contains(text(),'4')]
+        Click Element    xpath=//span[contains(text(),'30')]
 
-        Input Text    xpath=//input[@data-placeholder="Year"]    1984
+        Input Text    xpath=//input[@data-placeholder="Year"]    1984]
+
+        Click Element    xpath=//span[text()='Country/Region of residence']
+        Click Element    xpath=//span[contains(text(),'India')]
         Sleep    5s
 
 
