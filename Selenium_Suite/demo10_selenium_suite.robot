@@ -43,4 +43,8 @@ TC3
         Press Keys      None      Arrow Down
         Press Keys      None      Arrow Down
         Press Keys      None      Enter
-        
+
+        Wait Until Page Contains Element    xpath=//input[id='edit-title']      timeout=50s
+        ${title}    Get Title
+        Log To Console    ${title}
+        Should Be Equal    ${title}     Members Listing | NASSCOM
