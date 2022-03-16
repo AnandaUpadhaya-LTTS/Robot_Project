@@ -5,7 +5,7 @@ Library    OperatingSystem
 *** Test Cases ***
 TC1
         [Documentation]     This script validates if the phone no is 10 digitor not
-        Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
+        Open Browser    browser=headlesschrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
         Maximize Browser Window
         Set Selenium Implicit Wait    20s
         Go To    url=https://www.medibuddy.in/
