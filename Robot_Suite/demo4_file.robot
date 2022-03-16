@@ -29,5 +29,6 @@ TC3
         Remove Values From List    ${fruits}    mango
         Remove Values From List    ${fruits}    banana
         Append To List    ${fruits}     orange
+        Insert Into List    ${fruits}    2    Jackfruit
         Log To Console    ${fruits}
 
