@@ -24,4 +24,23 @@ TC1
         Press Keys      None      ENTER
 
 
+TC2
 
+        Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
+        Maximize Browser Window
+        Set Selenium Implicit Wait    20s
+        Go To    https://www.myntra.com/
+        Mouse Over    xpath=//span[text()="Profile"]
+        Click Element    xpath=//a[@class='desktop-linkButton']
+
+
+TC3
+        Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
+        Maximize Browser Window
+        Set Selenium Implicit Wait    20s
+        Go To    https://nasscom.in/
+        Mouse Over    Link=Membership
+        Press Keys      None      Arrow Down
+        Press Keys      None      Arrow Down
+        Press Keys      None      Enter
+        
