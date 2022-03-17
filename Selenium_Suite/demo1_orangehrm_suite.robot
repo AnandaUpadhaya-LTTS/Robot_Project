@@ -11,7 +11,7 @@ TC1
     Set Selenium Implicit Wait    20s
     Maximize Browser Window
     Input Text    id=txtUsername    Admin
-    Input Password    id=txtPassword    admin123cd..
+    Input Password    id=txtPassword    admin123
     Click Button    id=btnLogin
     Page Should Contain    My Info
     Click Element    id=welcome
