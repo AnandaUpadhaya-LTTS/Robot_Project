@@ -1,42 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220318 14:28:52.694" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo1 Suite" source="D:\L&amp;T_Tech\Robot_Framework\Robot_Programs\DB_Suite\demo1_suite.robot">
-<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
-<arg>dbapiModuleName=pymysql</arg>
-<arg>dbName=dbfree_db</arg>
-<arg>dbUsername=dbfree_db</arg>
-<arg>dbPassword=12345678</arg>
-<arg>dbHost=db4free.net</arg>
-<arg>dbPort=3306</arg>
-<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
-connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20220318 14:28:52.833" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
-<status status="PASS" starttime="20220318 14:28:52.751" endtime="20220318 14:28:53.697"/>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220318 15:19:46.081" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo11 Selenium Suite" source="D:\L&amp;T_Tech\Robot_Framework\Robot_Programs\Selenium_Suite\demo11_selenium_suite.robot">
+<test id="s1-t1" name="TC2">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220318 15:19:46.586" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220318 15:19:46.585" endtime="20220318 15:19:48.621"/>
 </kw>
-<test id="s1-t1" name="TC4">
-<kw name="Query" library="DatabaseLibrary">
-<var>${query_res}</var>
-<arg>select * from Products</arg>
-<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
-input `sansTran` to True to run command without an explicit transaction commit or rollback.
-Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20220318 14:28:53.703" level="INFO">Executing : Query  |  select * from Products </msg>
-<msg timestamp="20220318 14:28:54.137" level="INFO">${query_res} = ((1, 'Basu', 'ji'), (10, 'Basu', '7 plus 128 Gb'), (11, 'Basu', 'mayank'), (13, 'Basu', 'xxx'), (23, 'Basu', 'justname'), (42, 'Basu', 'isha'), (50, 'apsar', 'justname'), (67, 'Basu', 'justname'), (10...</msg>
-<status status="PASS" starttime="20220318 14:28:53.703" endtime="20220318 14:28:54.137"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220318 15:19:48.622" endtime="20220318 15:19:48.751"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${query_res}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220318 14:28:54.144" endtime="20220318 14:28:54.151"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220318 15:19:48.752" endtime="20220318 15:19:48.756"/>
 </kw>
-<status status="PASS" starttime="20220318 14:28:53.701" endtime="20220318 14:28:54.153"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://softwaretesting.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220318 15:19:48.758" level="INFO">Opening url 'https://softwaretesting.com/'</msg>
+<status status="PASS" starttime="20220318 15:19:48.757" endtime="20220318 15:19:51.429"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220318 15:19:56.450" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220318 15:19:51.438" endtime="20220318 15:19:56.450"/>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<arg>Ananda</arg>
+<doc>method Send</doc>
+<status status="PASS" starttime="20220318 15:19:56.451" endtime="20220318 15:19:56.525"/>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<arg>{TAB}</arg>
+<doc>method Send</doc>
+<status status="PASS" starttime="20220318 15:19:56.525" endtime="20220318 15:19:56.538"/>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<arg>pass123</arg>
+<doc>method Send</doc>
+<status status="PASS" starttime="20220318 15:19:56.539" endtime="20220318 15:19:56.613"/>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<arg>{ENTER}</arg>
+<doc>method Send</doc>
+<status status="PASS" starttime="20220318 15:19:56.616" endtime="20220318 15:19:56.640"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220318 15:19:56.646" endtime="20220318 15:19:56.646"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220318 15:19:56.650" endtime="20220318 15:20:00.516"/>
+</kw>
+<status status="PASS" starttime="20220318 15:19:46.584" endtime="20220318 15:20:00.517"/>
 </test>
-<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
-<doc>Disconnects from the database.</doc>
-<msg timestamp="20220318 14:28:54.160" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20220318 14:28:54.160" endtime="20220318 14:28:54.162"/>
-</kw>
-<status status="PASS" starttime="20220318 14:28:52.697" endtime="20220318 14:28:54.162"/>
+<status status="PASS" starttime="20220318 15:19:46.083" endtime="20220318 15:20:00.519"/>
 </suite>
 <statistics>
 <total>
@@ -45,7 +70,7 @@ Set optional input `returnAsDict` to True to return values as a list of dictiona
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo1 Suite">Demo1 Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo11 Selenium Suite">Demo11 Selenium Suite</stat>
 </suite>
 </statistics>
 <errors>

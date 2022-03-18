@@ -22,5 +22,7 @@ TC2
     Send    {TAB}
     Send    pass123
     Send    {ENTER}
+    Set Screenshot Directory    ../Screenshots
+
 
 
