@@ -1,14 +1,16 @@
 *** Settings ***
 Library     SeleniumLibrary
 Library    OperatingSystem
+Library      AutoRecorder
 
 *** Test Cases ***
 TC1
         [Documentation]     This script validates if the phone no is 10 digitor not
-        Open Browser    browser=headlesschrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
+        Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
         Maximize Browser Window
         Set Selenium Implicit Wait    20s
         Go To    url=https://www.medibuddy.in/
+        sleep   10s
         Click Button    id=wzrk-cancel
         Click Element    link=For Employer
         Switch Window   MediBuddy LaunchPad
